@@ -1,4 +1,4 @@
-﻿namespace ThalioApp
+﻿namespace Thalio
 {
     public partial class AppShell : Shell
     {

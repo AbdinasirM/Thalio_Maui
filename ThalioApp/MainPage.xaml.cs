@@ -1,4 +1,4 @@
-﻿namespace ThalioApp
+﻿namespace Thalio
 {
     public partial class MainPage : ContentPage
     {
@@ -9,17 +9,16 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        bool isPasswordVisible = false;
+
+        private void OnEyeIconTapped(object sender, EventArgs e)
         {
-            count++;
+            isPasswordVisible = !isPasswordVisible;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            entryPassword.IsPassword = !isPasswordVisible;
+            eyeIcon.Text = isPasswordVisible ? "\uf070" : "\uf06e"; // eye-slash : eye
         }
+
     }
 
 }

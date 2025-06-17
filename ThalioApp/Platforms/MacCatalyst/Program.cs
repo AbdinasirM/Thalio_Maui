@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace ThalioApp
+namespace Thalio
 {
     public class Program
     {

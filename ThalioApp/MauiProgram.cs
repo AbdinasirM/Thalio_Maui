@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Handlers;
 
-namespace ThalioApp
+namespace Thalio
 {
     public static class MauiProgram
     {
@@ -13,12 +14,20 @@ namespace ThalioApp
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("fa-solid-900.ttf", "FASolid");
                 });
 
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+          
+            // Remove underline on Android Entry
+#if ANDROID
+        EntryHandler.Mapper.AppendToMapping("NoUnderline", (handler, view) =>
+        {
+            handler.PlatformView.Background = null;
+        });
+#endif
             return builder.Build();
         }
     }

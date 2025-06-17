@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace ThalioApp
+namespace Thalio
 {
     [Application]
     public class MainApplication : MauiApplication

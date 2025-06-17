@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace ThalioApp
+namespace Thalio
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

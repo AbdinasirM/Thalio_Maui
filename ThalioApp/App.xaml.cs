@@ -1,4 +1,4 @@
-﻿namespace ThalioApp
+﻿namespace Thalio
 {
     public partial class App : Application
     {
